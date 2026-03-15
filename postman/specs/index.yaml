@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Identity Service API
   description: Demo identity service for user management
-  version: 1.0.0
+  version: 1.1.0
   contact:
     name: Identity Service Team
 servers:
