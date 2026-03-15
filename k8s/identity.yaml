@@ -23,11 +23,6 @@ spec:
           env:
             - name: PORT
               value: "3001"
-            # Insights (set by accounts orchestrator via env + simple templating)
-            - name: POSTMAN_INSIGHTS_PROJECT_ID
-              value: "__IDENTITY_PROJECT_ID__"
-            - name: POSTMAN_INSIGHTS_API_KEY
-              value: "__POSTMAN_API_KEY__"
           ports:
             - containerPort: 3001
           readinessProbe:

@@ -1,2 +1,11 @@
 workspace:
   id: 46f1fd2d-3dbf-4440-bfc2-60a4ff73e56c
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+cloudResources:
+  environments:
+    ../postman/environments/Identity Service - Dev.environment.yaml: 33394426-a074-4ec8-9207-231b46c1b5bb
+  specs:
+    ../postman/specs/index.yaml: 504607b1-7343-4e9e-a20f-6f15067c00e2
+  collections:
+    ../postman/collections/Identity Service API: 52631122-8fbfa205-4b50-4216-ab99-5e2cdf4dcd24
