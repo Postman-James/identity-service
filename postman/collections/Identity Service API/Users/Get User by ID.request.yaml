@@ -1,5 +1,14 @@
 $kind: http-request
-url: "{{baseUrl}}:/users/:id"
+description: |-
+  Retrieves a specific user by their ID.
+
+  **Path Parameters:**
+  - `id` (string, required): The user's unique identifier
+
+  **Responses:**
+  - 200: `{ user: { id, name, email } }` user found and returned
+  - 404: `{ error: "user not found" }`
+url: "{{baseUrl}}/users/:id"
 method: GET
 pathVariables:
   - key: id

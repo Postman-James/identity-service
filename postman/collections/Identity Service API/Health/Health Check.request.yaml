@@ -1,4 +1,9 @@
 $kind: http-request
+description: |-
+  Returns the health status of the Identity Service.
+
+  **Responses:**
+  - 200: `{ status: "ok", service: "identity-api" }`
 url: "{{baseUrl}}/health"
 method: GET
 scripts:

@@ -1,4 +1,9 @@
 $kind: http-request
+description: |-
+  Retrieves a list of all users in the system.
+
+  **Responses:**
+  - 200: `{ users: [{ id, name, email }] }`
 url: "{{baseUrl}}/users"
 method: GET
 scripts:

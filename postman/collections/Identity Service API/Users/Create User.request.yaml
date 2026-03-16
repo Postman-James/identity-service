@@ -1,11 +1,38 @@
 $kind: http-request
+description: >-
+  Creates a new user with the provided name and email.
+
+
+  If a user with the same email already exists, returns the existing user with a
+  200 status and an `existing: true` flag.
+
+
+  **Request Body:**
+
+  - `name` (string, required): The user's name
+
+  - `email` (string, required): The user's email address
+
+
+  **Responses:**
+
+  - 201: `{ user: { id, name, email } }` user created successfully
+
+  - 200: `{ user: { id, name, email }, existing: true }` user already exists
+  with this email
+
+  - 400: `{ error: "name and email are required" }` missing required fields
 url: "{{baseUrl}}/users"
 method: POST
 headers:
   Content-Type: application/json
 body:
   type: json
-  content: ""
+  content: |-
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com"
+    }
 scripts:
   - type: afterResponse
     code: >-

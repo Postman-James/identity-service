@@ -1,4 +1,5 @@
 $kind: collection
+name: Identity Service API
 description: >-
   API collection for the Identity Service - a demo service for managing user
   identities.
@@ -14,6 +15,7 @@ description: >-
   Base URL: The service runs on port 3001 by default.
 variables:
   baseUrl: http://localhost:3001
+  userId: ""
 scripts:
   - type: http:beforeRequest
     code: |-
